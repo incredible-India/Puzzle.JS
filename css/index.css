@@ -1,0 +1,36 @@
+#name{
+    font-size: 50px;
+    /* border: 3px; */
+    border-radius: 33px;
+    font-family: cursive;
+    background: white;
+    text-align: center;
+}
+
+#level{
+    text-align: center;
+    font-size: 30px;
+    font-family: cursive;
+    background: dimgrey;
+    border-radius: 19px;
+    margin-top: 20px;
+  
+}
+
+
+.info{
+    position: relative;
+    top: 296px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted;
+    /* background: blanchedalmond; */
+    padding: 20px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjGKHOM172RZaruxY2Pu1N2T0JKam7T2q2w&usqp=CAU);
+}
+
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjGKHOM172RZaruxY2Pu1N2T0JKam7T2q2w&usqp=CAU);
+}
