@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100vh;
+    overflow-y: auto;
 }
 
 .box {
