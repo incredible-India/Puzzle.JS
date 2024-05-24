@@ -19,19 +19,9 @@
 
 
 
-.info{
-    position: relative;
-    top: 296px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px dotted;
-    /* background: blanchedalmond; */
-    padding: 20px;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjGKHOM172RZaruxY2Pu1N2T0JKam7T2q2w&usqp=CAU);
-}
 
 body{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjGKHOM172RZaruxY2Pu1N2T0JKam7T2q2w&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/736x/47/cd/03/47cd031e07098e31e857a8aa439e63c2.jpg");
 }
