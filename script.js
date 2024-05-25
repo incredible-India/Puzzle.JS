@@ -32,3 +32,4 @@ element.append(currentImage);
         
     })
 });
+
