@@ -23,15 +23,22 @@
     <a href="https://www.fontspace.com/category/bold"><img src="https://see.fontimg.com/api/renderfont4/W9lv/eyJyIjoiZnMiLCJoIjoxMjYsInciOjEwMDAsImZzIjoxMjYsImZnYyI6IiNFMEUwRDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/UGF6dXJ1/quartzo-bold.png" alt="Bold fonts"></a>
 
     <div class="wrap">
-        <button class="button easy">Easy</button>
+        <button class="button easy" onclick="saveInfo('easy')">Easy</button>
       
-      <button class="button medium">Medium</button>
+      <button class="button medium" onclick="saveInfo('medium')">Medium</button>
       
-      <button class="button hard">Hard</button>
+      <button class="button hard" onclick="saveInfo('hard')">Hard</button>
       
 </div>
-<audio src="./bgm/PuzzleGameBGM.mp3" autoplay loop></audio>
+<!-- <audio src="./bgm/PuzzleGameBGM.mp3" autoplay loop></audio> -->
 
 
 </body>
+
+<script>
+    function saveInfo(level){
+        localStorage.setItem("level",level)
+        location.href = "./game.html"
+    }
+</script>
 </html>
