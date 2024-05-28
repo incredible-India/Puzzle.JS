@@ -77,7 +77,7 @@ else {
 
 function UpdateImage(iteration,level) {
   
-  let random =GenrateRandomRounds(1,5);
+  let random =GenrateRandomRounds(1,6);
 
     var content = document.getElementsByClassName("container")[0];
     for (let i = 1; i <= iteration; i++) {
