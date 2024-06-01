@@ -17,7 +17,6 @@
     flex-direction: row;
     height: 100vh;
     justify-content: space-around;
-    background-color: #f2e3ba;
 }
 
 .completeImage{
@@ -30,4 +29,17 @@
 .row{
     display: flex;
     flex-direction: row;
+}
+body{
+    background-color: #f2e3ba;
+}
+
+.parkImages{
+    margin-top: 250px;
+}
+
+#extraBox{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
 }
