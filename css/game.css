@@ -17,6 +17,7 @@
     flex-direction: row;
     height: 100vh;
     justify-content: space-around;
+    background-color: #f2e3ba;
 }
 
 .completeImage{

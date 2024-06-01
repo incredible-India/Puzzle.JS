@@ -93,7 +93,7 @@ function GenrateRandomRounds(min,max){
 
 
 
-
+// drag and drop fn for image
 Array.from(img).forEach(e => {
     console.log(e);
     e.addEventListener("dragstart", (a) => {
