@@ -141,14 +141,33 @@ Array.from(box).forEach(element => {
 });
 
 
+//to show popup
+var popup = document.getElementById("popup");
+
+var replay = document.getElementById("replay");
+
+replay.addEventListener("click", ()=>{
+  location.reload();
+})
+
 const timer =  document.getElementById("timer");
-let time = 200;
+var time;
+if (level == "easy"){
+  time = 20;
+}
+else if(level == "medium"){
+  time = 100;
+}
+else{
+  time = 180;
+}
+
 const timeout =setInterval(() => {
   
   timer.innerText = time--;
   if(time==0)
     {
       clearInterval(timeout);
-      document.body.innerText = "Time Out, Play again!!!"
+      popup.style.display = "block";
     }
 }, 1000);
