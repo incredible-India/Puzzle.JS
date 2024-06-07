@@ -171,3 +171,30 @@ const timeout =setInterval(() => {
       popup.style.display = "block";
     }
 }, 1000);
+
+var hint = document.getElementsByClassName("hintImg")[0];
+if(level == "easy"){
+  hint.style.display = "none";
+}
+var chances ;
+hint.addEventListener("click", (e)=>{
+
+  if(level == "medium"){
+    chances =1;
+    if(chances == 1)
+{    
+window.open("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","_blank")
+
+}
+ 
+  }
+  if(level == "hard"){
+    chances =2;
+    if(chances >= 1)
+    {  window.open("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","_blank")
+    }
+  
+  }
+  chances--;
+})
+

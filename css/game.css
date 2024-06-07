@@ -108,3 +108,13 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+
+.hint{
+    position: relative;
+    left: 560px;
+}
+
+.hint img {
+    height: 70px;
+    cursor: pointer;
+}
