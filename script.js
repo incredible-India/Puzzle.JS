@@ -74,14 +74,16 @@ else {
 }
 
 
-
+var randomimg;
 function UpdateImage(iteration,level,array) {
   let randomImagePiece = GenerateRandomImages(array)
   let random =GenrateRandomRounds(1,6);
+  randomimg=random;
 console.log(randomImagePiece);
     var content = document.getElementsByClassName("container")[0];
     for (let i = 0; i < iteration; i++) {
       console.log(randomImagePiece[i]);
+     
         content.innerHTML += `
         <img src="./images/${level}/round-${random}/image_part_00${randomImagePiece[i]}.jpg" alt="" style="width: 150px;height: 150px;" draggable="true">`
 
@@ -176,25 +178,43 @@ var hint = document.getElementsByClassName("hintImg")[0];
 if(level == "easy"){
   hint.style.display = "none";
 }
-var chances ;
+
+
+//for displaying hint
+document.addEventListener('DOMContentLoaded', (event) => {
+  const modalBox = document.getElementById('modalBox');
+  const openModal = document.getElementById('openModal');
+  const closeModal = document.querySelector('.close');
+
+  // openModal.onclick = function() {
+  //     modalBox.style.display = "block";
+  // }
+
+  closeModal.onclick = function() {
+      modalBox.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modalBox) {
+          modalBox.style.display = "none";
+      }
+  }
+});
+
+var chance = 0;
+var hintImage = document.getElementById("hintImage");
+var hintText = document.getElementById("hintText");
 hint.addEventListener("click", (e)=>{
-
-  if(level == "medium"){
-    chances =1;
-    if(chances == 1)
-{    
-window.open("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","_blank")
-
-}
- 
+  chance++;
+  if(level == "medium" && chance == 1){
+    modalBox.style.display = "block";
+    hintText.innerText =`You have ${chance - 1} chances left to open this image`
   }
-  if(level == "hard"){
-    chances =2;
-    if(chances >= 1)
-    {  window.open("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","_blank")
-    }
-  
+  if(level == "hard" && chance <= 2){
+    modalBox.style.display = "block";
+    hintText.innerText =`You have ${2-chance} chances left to open this image`
   }
-  chances--;
+
+  hintImage.setAttribute( "src", `./images/${level}/round-${randomimg}/${level}-${randomimg}.jpg`)
 })
 
