@@ -79,10 +79,10 @@ function UpdateImage(iteration,level,array) {
   let randomImagePiece = GenerateRandomImages(array)
   let random =GenrateRandomRounds(1,6);
   randomimg=random;
-console.log(randomImagePiece);
+// console.log(randomImagePiece);
     var content = document.getElementsByClassName("container")[0];
     for (let i = 0; i < iteration; i++) {
-      console.log(randomImagePiece[i]);
+      // console.log(randomImagePiece[i]);
      
         content.innerHTML += `
         <img src="./images/${level}/round-${random}/image_part_00${randomImagePiece[i]}.jpg" alt="" style="width: 150px;height: 150px;" draggable="true">`
@@ -109,9 +109,9 @@ function GenerateRandomImages(array){
 
 // drag and drop fn for image
 Array.from(img).forEach(e => {
-    console.log(e);
+    // console.log(e);
     e.addEventListener("dragstart", (a) => {
-        console.log(a.target, "target");
+        // console.log(a.target, "target");
         currentImage = a.target;
     })
 })
@@ -120,24 +120,24 @@ Array.from(box).forEach(element => {
 
     element.addEventListener("dragenter", (e) => {
         e.preventDefault();
-        console.log("enter");
+        // console.log("enter");
         element.append(currentImage);
 
     })
 
     element.addEventListener("dragover", (e) => {
         e.preventDefault();
-        console.log("hovering");
+        // console.log("hovering");
     })
 
     element.addEventListener("drop", (x) => {
         x.preventDefault()
-        console.log("drop");
+        // console.log("drop");
         element.append(currentImage);
         element.style.border = "none"
         document.getElementById("extraBox1").style.border = "1px solid red"
         document.getElementById("extraBox2").style.border = "1px solid red"
-
+        CheckPAttern();
 
     })
 });
@@ -217,4 +217,12 @@ hint.addEventListener("click", (e)=>{
 
   hintImage.setAttribute( "src", `./images/${level}/round-${randomimg}/${level}-${randomimg}.jpg`)
 })
+
+//function to check the pattherns in the box
+function CheckPAttern(){
+  //checking the image inside the box..
+  Array.from(box).forEach(e=>{
+    //console.log(e.childNodes[0].src.tostring);
+  })
+}
 
